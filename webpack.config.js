@@ -2,7 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    mode: 'development',
   entry: './src/main.js',
+  devtool: 'inline-source-map',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, './js'),
@@ -12,6 +14,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'To Do List J2706',
       filename: '../index.html',
+      template: './index1.html'
     }),
   ],
   module: {
